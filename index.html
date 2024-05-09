@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertitore di velocità</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> velocità media in km/h e m/s</h1>
+    <p>Inserisci il tempo impiegato:
+        <input id="min" value="0" placeholder="minuti"/>'
+        <input id="sec" value="10" placeholder="secondi"/>"
+    </p>
+    <p>
+        Inserisci lo spazio percorso:
+        <input id="metri" value="100" placeholder="metri"/> metri
+    </p>
+    <p>
+    <input type="button" value="Calcola velocità media" 
+    onclick="
+    min = 1 * document.getElementById('min').value;
+    sec = 1 * document.getElementById('sec').value;
+    metri = 1 * document.getElementById('metri').value;
+    sec += min * 60;
+    vms = metri / sec;
+    vkmh = vms * 60 * 60 / 1000;
+    document.getElementById('vms').innerHTML = vms;
+    document.getElementById('vkmh').innerHTML = vkmh;
+    "/>
+    </p>
+    <p>
+        La velocità media è pari a <span id="vms">...</span> m/s
+        (metri al secondo),
+        <br />
+        che corrisponde a <span id="vkmh">...</span> km/h
+        (chilometri orari).
+    </p>
+</body>
+</html>
